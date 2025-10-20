@@ -41,6 +41,18 @@ export function Navigation() {
               Military
             </Link>
             <Link
+              href="/leader"
+              className="text-lg uppercase tracking-wider hover:text-primary transition-colors font-semibold"
+            >
+              Leader
+            </Link>
+            <Link
+              href="/comrades"
+              className="text-lg uppercase tracking-wider hover:text-primary transition-colors font-semibold"
+            >
+              Comrades
+            </Link>
+            <Link
               href="/contact"
               className="text-lg uppercase tracking-wider hover:text-primary transition-colors font-semibold"
             >
@@ -78,6 +90,20 @@ export function Navigation() {
                 onClick={() => setIsOpen(false)}
               >
                 Military
+              </Link>
+              <Link
+                href="/leader"
+                className="text-xl uppercase tracking-wider hover:text-primary transition-colors font-semibold py-2"
+                onClick={() => setIsOpen(false)}
+              >
+                Leader
+              </Link>
+              <Link
+                href="/comrades"
+                className="text-xl uppercase tracking-wider hover:text-primary transition-colors font-semibold py-2"
+                onClick={() => setIsOpen(false)}
+              >
+                Comrades
               </Link>
               <Link
                 href="/contact"

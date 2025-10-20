@@ -1,9 +1,16 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Zap, Shield, Target } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import Link from "next/link"
+import { useState } from "react"
 
 export default function Home() {
+  const [bio, setBio] = useState(
+    "Welcome to The RROR, a platform dedicated to exploring Russian heritage, culture, and leadership. Under the guidance of Chairman Izzy, we celebrate the rich history and enduring strength of the Russian Federation. Our mission is to educate, inspire, and unite those who appreciate the profound impact Russia has made on world history and continues to make today.",
+  )
+
   return (
     <main className="min-h-screen bg-background">
       {/* Navigation Component */}
@@ -41,6 +48,19 @@ export default function Home() {
                 {"Hosted by Chairman Izzy"}
               </p>
               <div className="absolute -right-8 top-1/2 -translate-y-1/2 w-6 h-6 bg-accent" />
+            </div>
+
+            <div className="mb-12 max-w-3xl mx-auto">
+              <div className="relative">
+                <div className="absolute -top-3 -left-3 w-12 h-12 bg-primary" />
+                <div className="absolute -bottom-3 -right-3 w-12 h-12 bg-accent" />
+                <textarea
+                  value={bio}
+                  onChange={(e) => setBio(e.target.value)}
+                  className="w-full min-h-[220px] p-8 bg-card text-card-foreground border-4 border-foreground text-lg md:text-xl leading-relaxed resize-none focus:outline-none focus:ring-4 focus:ring-primary/50 transition-all font-medium"
+                  placeholder="Write your professional bio here..."
+                />
+              </div>
             </div>
 
             {/* CTA Buttons */}
