@@ -1,13 +1,22 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Zap, Shield, Target } from "lucide-react"
+import { Navigation } from "@/components/navigation"
+import Link from "next/link"
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background">
+      {/* Navigation Component */}
+      <Navigation />
+
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 opacity-15">
-          <img src="/ussr-soviet-propaganda-poster-artwork-with-hammer-.jpg" alt="" className="w-full h-full object-cover" />
+          <img
+            src="/ussr-soviet-propaganda-poster-artwork-with-hammer-.jpg"
+            alt=""
+            className="w-full h-full object-cover"
+          />
         </div>
 
         {/* Geometric background elements */}
@@ -36,20 +45,24 @@ export default function Home() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-16">
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground text-xl px-8 py-6 h-auto uppercase tracking-wider group"
-              >
-                Enter Now
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-foreground text-foreground hover:bg-foreground hover:text-background text-xl px-8 py-6 h-auto uppercase tracking-wider bg-transparent"
-              >
-                Learn More
-              </Button>
+              <Link href="/about">
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground text-xl px-8 py-6 h-auto uppercase tracking-wider group"
+                >
+                  Enter Now
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              <Link href="/about">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-foreground text-foreground hover:bg-foreground hover:text-background text-xl px-8 py-6 h-auto uppercase tracking-wider bg-transparent"
+                >
+                  Learn More
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -61,7 +74,11 @@ export default function Home() {
       {/* Features Section */}
       <section className="py-24 bg-secondary text-secondary-foreground relative">
         <div className="absolute inset-0 opacity-10">
-          <img src="/ussr-soviet-industrial-workers-factory-constructiv.jpg" alt="" className="w-full h-full object-cover" />
+          <img
+            src="/ussr-soviet-industrial-workers-factory-constructiv.jpg"
+            alt=""
+            className="w-full h-full object-cover"
+          />
         </div>
 
         <div className="absolute top-0 left-0 w-full h-2 bg-accent" />
@@ -119,10 +136,71 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 right-0 h-2 bg-accent" />
       </section>
 
+      {/* Russian Military Heritage Section */}
+      <section className="py-24 bg-background relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-2 bg-primary" />
+
+        <div className="absolute inset-0">
+          <div className="absolute top-20 right-20 w-40 h-40 border-4 border-primary opacity-20 rotate-45" />
+          <div className="absolute bottom-20 left-20 w-32 h-32 bg-accent opacity-10" />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <h2 className="text-7xl md:text-8xl lg:text-9xl font-bold text-center mb-16 uppercase tracking-tight text-primary">
+            Military Heritage
+          </h2>
+
+          <div className="max-w-5xl mx-auto space-y-12">
+            <div className="border-l-8 border-primary pl-8 py-4">
+              <h3 className="text-4xl md:text-5xl font-bold mb-4 uppercase">Legendary Strength</h3>
+              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+                The Russian military stands as one of the world's most formidable forces, with a proud history spanning
+                centuries. From the Red Army's pivotal role in World War II to modern strategic capabilities, Russian
+                military power has shaped global history.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-secondary text-secondary-foreground p-8 border-4 border-foreground relative group">
+                <div className="absolute -top-2 -left-2 w-8 h-8 bg-primary" />
+                <h4 className="text-3xl font-bold mb-4 uppercase">Advanced Arsenal</h4>
+                <p className="text-lg leading-relaxed">
+                  Equipped with cutting-edge technology including hypersonic missiles, advanced fighter jets, and
+                  nuclear capabilities that ensure strategic deterrence and national security.
+                </p>
+              </div>
+
+              <div className="bg-secondary text-secondary-foreground p-8 border-4 border-foreground relative group">
+                <div className="absolute -top-2 -left-2 w-8 h-8 bg-accent" />
+                <h4 className="text-3xl font-bold mb-4 uppercase">Elite Forces</h4>
+                <p className="text-lg leading-relaxed">
+                  Home to legendary special forces units including Spetsnaz, renowned worldwide for their rigorous
+                  training, tactical excellence, and unwavering dedication to duty.
+                </p>
+              </div>
+            </div>
+
+            <div className="border-l-8 border-accent pl-8 py-4">
+              <h3 className="text-4xl md:text-5xl font-bold mb-4 uppercase">Historical Impact</h3>
+              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+                From the Battle of Stalingrad to modern peacekeeping operations, the Russian military has demonstrated
+                resilience, strategic brilliance, and an unbreakable spirit that continues to inspire generations.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-0 left-0 w-full h-2 bg-accent" />
+      </section>
+
       {/* CTA Section */}
       <section className="py-32 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <img src="/ussr-soviet-space-program-sputnik-cosmonaut-propag.jpg" alt="" className="w-full h-full object-cover" />
+          <img
+            src="/ussr-soviet-space-program-sputnik-cosmonaut-propag.jpg"
+            alt=""
+            className="w-full h-full object-cover"
+          />
         </div>
 
         <div className="absolute inset-0">
@@ -138,13 +216,15 @@ export default function Home() {
             <p className="text-2xl md:text-3xl text-muted-foreground mb-12 uppercase tracking-wide">
               Be Part of Something Greater
             </p>
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground text-2xl px-12 py-8 h-auto uppercase tracking-wider group"
-            >
-              Get Started Today
-              <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground text-2xl px-12 py-8 h-auto uppercase tracking-wider group"
+              >
+                Get Started Today
+                <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
