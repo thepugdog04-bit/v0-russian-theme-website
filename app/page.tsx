@@ -6,6 +6,10 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 opacity-15">
+          <img src="/ussr-soviet-propaganda-poster-artwork-with-hammer-.jpg" alt="" className="w-full h-full object-cover" />
+        </div>
+
         {/* Geometric background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 left-10 w-32 h-32 bg-primary rotate-45 opacity-20" />
@@ -18,7 +22,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto text-center">
             {/* Main Title */}
             <h1 className="text-[12rem] md:text-[16rem] lg:text-[20rem] font-bold leading-none tracking-tighter mb-8 text-balance text-primary">
-              THE RROR      
+              THE RROR
             </h1>
 
             {/* Subtitle with Russian-inspired geometric accent */}
@@ -56,6 +60,10 @@ export default function Home() {
 
       {/* Features Section */}
       <section className="py-24 bg-secondary text-secondary-foreground relative">
+        <div className="absolute inset-0 opacity-10">
+          <img src="/ussr-soviet-industrial-workers-factory-constructiv.jpg" alt="" className="w-full h-full object-cover" />
+        </div>
+
         <div className="absolute top-0 left-0 w-full h-2 bg-accent" />
 
         <div className="container mx-auto px-4">
@@ -113,6 +121,10 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="py-32 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img src="/ussr-soviet-space-program-sputnik-cosmonaut-propag.jpg" alt="" className="w-full h-full object-cover" />
+        </div>
+
         <div className="absolute inset-0">
           <div className="absolute top-10 right-10 w-64 h-64 bg-primary opacity-10 rotate-45" />
           <div className="absolute bottom-10 left-10 w-48 h-48 bg-accent opacity-20" />
